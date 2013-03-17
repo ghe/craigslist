@@ -123,7 +123,7 @@ if __name__ == "__main__":
                     mail.send_gmail(account, password, emails, "craigslist scrub", msg)
                     pass
                 except Exception as e:
-                    print "mail sending error({0}): {1}".format(e.errno, e.strerror)
+                    print("mail sending error: " + str(e))
 
             for i in range(10):
                 print "sleeping for %d more minutes" % (10 - i,)
